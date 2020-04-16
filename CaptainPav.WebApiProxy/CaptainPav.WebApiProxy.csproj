@@ -4,15 +4,25 @@
     <TargetFrameworks>netstandard1.1;netstandard2.0;netstandard2.1</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Wrapper over HttpClient that makes communicating with WebApi endpoints easier.</Description>
-    <Copyright>Michael Pavlak</Copyright>
+    <Copyright>Michael Pavlak 2020</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/spelltwister/CaptainPav.WebApi</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>HttpClient, WebApi</PackageTags>
+    <Authors>Michael Pavlak</Authors>
+    <Product>WebApiProxy</Product>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
