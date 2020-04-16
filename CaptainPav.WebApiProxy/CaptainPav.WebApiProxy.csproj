@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Wrapper over HttpClient that makes communicating with WebApi endpoints easier.</Description>
+    <Copyright>Michael Pavlak</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/spelltwister/CaptainPav.WebApi</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>HttpClient, WebApi</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
