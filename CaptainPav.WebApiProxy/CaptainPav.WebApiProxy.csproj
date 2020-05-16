@@ -12,6 +12,7 @@
     <Authors>Michael Pavlak</Authors>
     <Product>WebApiProxy</Product>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

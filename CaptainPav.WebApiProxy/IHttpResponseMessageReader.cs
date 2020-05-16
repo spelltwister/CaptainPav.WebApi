@@ -1,3 +1,4 @@
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -25,8 +26,26 @@ namespace CaptainPav.WebApiProxy
 		/// otherwise, an exception is thrown.
 		/// </returns>
 		/// <exception cref="UnexpectedStatusCodeException">
-		/// Throw if the <see cref="HttpResponseMessage"/> indicates an unsuccessful status code
+		/// Thrown if the <see cref="HttpResponseMessage"/> indicates an unsuccessful status code
 		/// </exception>
 		Task<string> ReadMessageIfSuccessfulOrThrowAsync(HttpResponseMessage message, params HttpStatusCode[] validCodes);
-	}
+
+		Task<Stream> GetStreamIfSuccessfulOrThrowAsync(HttpResponseMessage message, params HttpStatusCode[] validCodes);
+
+		/// <summary>
+		/// Throws an exception if the response message indicates
+		/// an unsuccessful result
+		/// </summary>
+		/// <param name="message">
+		/// The <see cref="HttpResponseMessage"/> to check for failure
+		/// </param>
+        /// <param name="validCodes">
+        /// The set of <see cref="HttpStatusCode"/>s which represent a successful call
+        /// </param>
+        /// <remarks>
+        /// This method will try to reconstruct the original exception sent in the
+        /// body of the response
+        /// </remarks>
+		Task ThrowIfNotSuccessfulAsync(HttpResponseMessage message, params HttpStatusCode[] validCodes);
+    }
 }
